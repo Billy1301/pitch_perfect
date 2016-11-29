@@ -30,7 +30,9 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
+    //this uses the tag number with the switch statement
     enum ButtonType: Int {
+            // tags in order = 0, 1,2,3,4,5
         case slow = 0, fast, chipmunk, vader, echo, reverb
     }
     
@@ -38,6 +40,7 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playSoundForButton(_ sender: UIButton) {
         
+        //this connects with the enum ButtonType by tag 0 to 5
         switch(ButtonType(rawValue: sender.tag)!) {
             case .slow:
                 playSound(rate: 0.5)
@@ -62,7 +65,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {

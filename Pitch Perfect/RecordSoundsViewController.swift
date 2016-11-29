@@ -26,7 +26,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
     }
 
-    // using audio import AVFoundation
+    // using audio - import AVFoundation
     @IBAction func recordAudio(_ sender: AnyObject) {
         recordingLabel.text = "Recording in Progress"
         stopRecordingButton.isEnabled = true
