@@ -68,6 +68,7 @@ class PlaySoundsViewController: UIViewController {
         setButtonFit()
     }
     
+    // this is to prevent squishing the buttons on smaller screen size
     func setButtonFit(){
         snailButton.imageView?.contentMode = .scaleAspectFit
         chipmunkButton.imageView!.contentMode = .scaleAspectFit
